@@ -5,9 +5,16 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Level</th>
-                <th scope="col" colspan="2">Timestamp</th>
+                <th scope="col">
+                    Name
+                    {{{sortable 'name' _sort}}}
+                </th>
+                <th scope="col">Level
+                    {{{sortable 'level' _sort}}}
+                </th>
+                <th scope="col" colspan="2">Timestamp
+                    {{{sortable 'createdAt' _sort}}}
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -26,11 +33,11 @@
                 </td>
             </tr>
             {{else}}
-                <tr>
-                    <th colspan="5" class="text-center">There is no course created. 
-                        <a href="/courses/create">Create one</a>
-                    </th>
-                </tr>
+            <tr>
+                <th colspan="5" class="text-center">There is no course created.
+                    <a href="/courses/create">Create one</a>
+                </th>
+            </tr>
             {{/each}}
         </tbody>
     </table>
@@ -67,8 +74,8 @@
             const deleteButton = document.querySelector('.btn.btn-danger')
             const courseID = button.getAttribute('data-id')
             exampleForm.action = '/courses/' + courseID + '?_method=DELETE'
-            deleteButton.addEventListener('click' , () => {
-            exampleForm.submit()
+            deleteButton.addEventListener('click', () => {
+                exampleForm.submit()
             })
         })
     })

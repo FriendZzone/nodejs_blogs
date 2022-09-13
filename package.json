@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/FriendZzone/nodejs_blogs#readme",
   "dependencies": {
+    "bootstrap": "^5.2.1",
+    "bootstrap-icons": "^1.9.1",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
     "method-override": "^3.0.0",
